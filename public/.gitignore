@@ -1,0 +1,8 @@
+# Test file
+build/
+
+# 3rd-party assets
+bootstrap/
+jquery/
+jquery-ui/
+font-awesome/

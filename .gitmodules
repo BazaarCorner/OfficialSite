@@ -1,0 +1,24 @@
+[submodule "module/BazaarMembership"]
+	path = module/BazaarMembership
+	url = https://github.com/BazaarCorner/BazaarComponents_Membership.git
+[submodule "module/BazaarSubscription"]
+	path = module/BazaarSubscription
+	url = https://github.com/BazaarCorner/BazaarComponents_Subscription.git
+[submodule "module/BazaarOrders"]
+	path = module/BazaarOrders
+	url = https://github.com/BazaarCorner/BazaarComponents_Orders.git
+[submodule "module/BazaarShopping"]
+	path = module/BazaarShopping
+	url = https://github.com/BazaarCorner/BazaarComponents_Shopping.git
+[submodule "module/BazaarCatalog"]
+	path = module/BazaarCatalog
+	url = https://github.com/BazaarCorner/BazaarComponents_Catalog.git
+[submodule "module/BazaarPayments"]
+	path = module/BazaarPayments
+	url = https://github.com/BazaarCorner/BazaarComponents_Payments.git
+[submodule "module/BazaarMarket"]
+	path = module/BazaarMarket
+	url = https://github.com/BazaarCorner/BazaarComponents_MarketPlace.git
+[submodule "module/BazaarSocials"]
+	path = module/BazaarSocials
+	url = https://github.com/BazaarCorner/BazaarComponents_Socials.git

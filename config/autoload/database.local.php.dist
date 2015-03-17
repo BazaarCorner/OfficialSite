@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * Local Database Configuration Override
+ *
+ * This configuration override file is for overriding environment-specific and
+ * security-sensitive configuration information. Copy this file without the
+ * .dist extension at the end and populate values as needed.
+ */
+
+return [
+    'db' => [
+        'adapters' => [
+            'sitedb-master' => [
+                'driver'    => 'Pdo',
+                'dsn'       => 'mysql:dbname=masterdb;host=localhost',
+                'username'  => 'username',
+                'password'  => 'password'
+            ],
+            'sitedb-slave' => [
+                'driver'    => 'Pdo',
+                'dsn'       => 'mysql:dbname=slavedb;host=localhost',
+                'username'  => 'username',
+                'password'  => 'password'
+            ]
+        ]
+    ],
+    
+    'service_manager' => [
+        'abstract_factories' => [
+            'Zend\Db\Adapter\AdapterAbstractServiceFactory'
+        ]
+    ]
+];
