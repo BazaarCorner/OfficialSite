@@ -1,0 +1,732 @@
+<nav class="navbar navbar-fixed-top" style="background-color: white; box-shadow: 1px 0px 4px silver;">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand img-responsive center-block" href="<?= $this->url('home'); ?>">
+                <img src="<?= $this->basePath('assets/img/site/logo.png')?>" style="width: 150px;">
+            </a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar">
+            <div class="nav navbar-left">
+                <form class="navbar-form" role="search"
+                    method="GET" action="#">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <em style="width: inherit;">
+                                <input type="text" class="form-control" 
+                                       name="q" 
+                                       placeholder="What product you have in mind?">
+                            </em>
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-default">
+                            </span>
+                        </div>
+                    </div>                    
+                </form>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="<?=$this->url('market')?>"> Market Place </a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                          <!--<i class="fa fa-user"></i>-->
+                        Account
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="<?= $this->url('member/login')?>">Sign In</a></li>
+                        <li><a href="<?= $this->url('member/registration')?>">Register</a></li>                   
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<!--
+
+<div class="js-midNav" style="height: 114px;">
+    <div class="b-floatMenuWrapper js-floatWrapper">
+        <div class="l-metaLinks b-topLinks js-topLinks">
+            <div class="l-pageWrapper">
+                <div class="b-topLinks__topNav">
+                    <div class="b-topLinks__otherSource">
+    <div class="b-topLinks__platformNav">
+        <div class="tooltip-header-container">
+            <a href="http://zalora.com.ph/" class="js-tooltip-header active" title="Asia's Online Fashion Destination - Your one stop for the latest styles and brands!">
+                ZALORA            </a>
+        </div>
+
+                     <div class="tooltip-header-container">
+                 <a class="js-tooltip-header mkt-type-link " href="http://marketplace.zalora.com.ph" title="Explore unique styles from independent boutiques you'll find nowhere else!" onclick="ga('send', 'event', 'Marketplace', 'Main Site Top Nav Click', 'segment', {'nonInteraction': 1})">
+                     Marketplace                 </a>
+             </div>
+        
+        <div class="tooltip-header-container">
+            <span class="ctl-type-divider"> </span>
+<a class="js-tooltip-header ctl-type-link " href="http://zalora.com.ph/outlet" title="Grab these great deals and last-chance items before they're gone!">
+    Outlet</a>        </div>
+
+        <div class="tooltip-header-container">
+            <a href="http://zalora.com.ph/magazine/" class="js-tooltip-header " title="Get the latest fashion, trend and style news with ZALORA Magazine. Read Now!">
+                Magazine            </a>
+        </div>
+    </div>
+</div>
+<div id="b-topLinks__user">
+    <ul class="b-topLink__metaLinks js-nav">
+        
+      
+      <li class="b-topLink__metaLinks--item b-topLink__account dropdown">
+        <span class="js-nav-hd">Account</span>
+        <div class="js-sidebarBlock dropdown-menu" style="display: none;">
+          <div class="b-topLink__accountLinks">
+            <ul class="" role="menu" aria-labelledby="dLabel">
+                                <li class="b-topLink__accountLinks__menuEntry"><a class="" href="/customer/account/login" title="Login" rel="follow">Login</a></li>
+                  <li class="b-topLink__accountLinks__menuEntry"><a class="" href="/customer/account/create" title="Register" rel="follow">Register</a></li>
+                            <li class="b-topLink__accountLinks__menuEntry">
+                  <a href="#boxTrackOrder" class="js-trackOrder" data-toggle="modal" data-target="#boxTrackOrder">Order Tracking</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </li>
+
+        
+      <li class="b-topLink__metaLinks--item b-topLink__help
+      ">
+          <a class="help" href="/faq/" title="Help" rel="follow">
+              Help          </a></li>
+                </ul>
+</div>
+                </div>
+            </div>
+                </div>
+
+        <div class="l-nav b-midHeader">
+                        <div class="l-pageWrapper box">
+                <div class="logo lfloat">
+                                            <div class="">
+                            <a href="/" title=""><div class="logo__image"></div></a>
+                        </div>
+                                    </div>
+
+                <div class="b-segment lfloat">
+                    <span class="home active">
+                    [if lt IE 9]><span class="nav-subGradient">></span><![endif]
+                   </span>
+                                                                                                <span class="lfloat b-segment__item ">
+                                <a href="/women/" class="a-white">WOMEN</a>
+                                <span class="s-global b-segment__arrow"></span>
+                                [if lt IE 9]><span class="nav-subGradient"></span><![endif]
+                            </span>
+                                                    <span class="lfloat b-segment__item active">
+                                <a href="/men/" class="a-white">MEN</a>
+                                <span class="s-global b-segment__arrow"></span>
+                                [if lt IE 9]><span class="nav-subGradient"></span><![endif]
+                            </span>
+                                                            </div>
+                <div class="b-search lfloat">
+                    <form id="onsiteSearch" class=" ui-formRounded" action="/catalog/" method="get" autocapitalize="on" autocorrect="on">
+                        <fieldset>
+                            <label class="b-serarch__visuallyHidden" for="search">Suche</label>
+                                                        <input id="search-input" class="ui-inputText ui-inputFit-r lfloat b-search__selSearchInput" name="q" type="text" placeholder="Search from over 50 000 products" autocomplete="off">
+                            <button class="b-search__uiSearch lfloat b-search__selSearchButton" type="submit"><span class="s-global b-search__iInvertedSearchLoupe"></span><span class="hdSearchButton"></span></button>
+                            <input id="baseUrl" type="hidden" value="">
+                        </fieldset>
+                        <div id="searchSuggestResult" class="b-search__ssgResult display-none"></div>
+                    </form>
+                </div>
+                <div class="b-wishList lfloat">
+                    <a href="/customer/wishlist" title="Wishlist" rel="follow" class="a-white">Wishlist</a>
+                </div>
+                <div id="shoppingBagBlock" class="b-shoppingBag b-shoppingBag__navCart fsm rfloat">
+                    <a class="js-headBag js-viewCart itm-link b-shoppingBag__itmLink a-white" href="/cart/" title="View cart">
+    <div class="b-shoppingBag__viewBag lfloat">My Bag</div>
+     <div class="price sel-cart-empty">Cart empty</div>
+    <div id="shopping-bag-qty" class="s-global b-shoppingBag__num fsm strong lfloat">0</div>
+</a>
+                </div>
+                                            </div>
+
+                     </div>
+                <div class="l-menu b-menu js-floatMenu">
+            <div class="l-pageWrapper">
+                    <ul class="nav">
+            <li class="">
+            [if lt IE 9]><span class="nav-subGradient"></span><![endif]
+                    </li><li class="active">
+            [if lt IE 9]><span class="nav-subGradient"></span><![endif]
+                            <div id="sub-menu">
+<ul class="nav-sub">
+    <li>
+        <a href="/men/new-products/">NEW IN</a>
+                    </li>
+                                                                                                                                                                                                            <li class=" ">
+                                        <a href="/men/clothing/" id="cat_95" class="sel-cat-clothing">
+                        <span class="nav-subTxt">CLOTHING</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/t-shirts/">
+                                            <span class="cnv-name">T-Shirts</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/polos/">
+                                            <span class="cnv-name">Polos</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/shirts/">
+                                            <span class="cnv-name">Button-Downs</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/shorts/">
+                                            <span class="cnv-name">Shorts</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/swimwear/">
+                                            <span class="cnv-name">Swimwear</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/pants/">
+                                            <span class="cnv-name">Pants</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/jeans/">
+                                            <span class="cnv-name">Jeans</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/jackets/">
+                                            <span class="cnv-name">Jackets</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                                                                                            <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/underwear/">
+                                            <span class="cnv-name">Underwear</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/socks/">
+                                            <span class="cnv-name">Socks</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/clothing/loungewear/">
+                                            <span class="cnv-name">Loungewear</span>
+                                        </a>
+                                    </li>
+                                                        </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/clothing/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/zalora/"> ZALORA</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/zalora-basics/"> ZALORA Basics</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/mango-man/"> MANGO Man</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/penshoppe/"> Penshoppe</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/nike/"> Nike</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/levis/"> Levi's</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/collective-com/"> Collective.com</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/river-island/"> River Island</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/freego/"> Freego</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/mick-marty/"> Mick+Marty</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clothing/fubu/"> FUBU</a></li>
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/shoes/" id="cat_120" class="sel-cat-shoes">
+                        <span class="nav-subTxt">SHOES</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/sneakers/">
+                                            <span class="cnv-name">Sneakers</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/boat-shoes/">
+                                            <span class="cnv-name">Boat Shoes</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/flip-flops/">
+                                            <span class="cnv-name">Flip Flops</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/loafers/">
+                                            <span class="cnv-name">Loafers</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/formal-shoes/">
+                                            <span class="cnv-name">Formal Shoes</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/shoes/boots-men/">
+                                            <span class="cnv-name">Boots</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                    </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/shoes/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/zalora/">ZALORA</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/zalora-basics/">ZALORA Basics</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/penshoppe/"> Penshoppe</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/nike/"> Nike</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/sonnix/"> Sonnix</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/mick-marty/">Mick + Marty</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/river-island/"> River Island</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/collective-com/"> Collective.com</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/crocs/"> Crocs</a>
+                </li><li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/pony/"> Pony</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/shoes/h2ocean/"> H2Ocean</a></li>
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/accessories/" id="cat_79" class="sel-cat-accessories">
+                        <span class="nav-subTxt">ACCESSORIES</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/tech-accessories/">
+                                            <span class="cnv-name">Tech Accessories</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/hats/">
+                                            <span class="cnv-name">Hats</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/belts/">
+                                            <span class="cnv-name">Belts</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                                                                                            <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/jewelry/">
+                                            <span class="cnv-name">Jewelry</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/umbrella/">
+                                            <span class="cnv-name">Umbrella</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/cases/">
+                                            <span class="cnv-name">Cases</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/accessories/small-accessories/">
+                                            <span class="cnv-name">Small Accessories</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/accessories/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+       <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/zalora/">ZALORA</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/rayban-philippines/"> Ray-Ban</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/penshoppe/">Penshoppe</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/mick-marty/">Mick + Marty</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/mc-jim/">McJim</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/toywatch/">ToyWatch</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/mossimo/">Mossimo</a></li>	
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/collective-com/">Collective.com</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sunniesbycharlie/">Sunnies Studios</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/casio/">Casio</a></li>	
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/accessories/oakley/">Oakley</a></li>		
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/watches/" id="cat_4214" class="sel-cat-watches">
+                        <span class="nav-subTxt">WATCHES</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/watches/stainless-steel/">
+                                            <span class="cnv-name">Stainless steel</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/watches/leather-watch/">
+                                            <span class="cnv-name">Leather</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/watches/rubber/">
+                                            <span class="cnv-name">Rubber</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/watches/plastic/">
+                                            <span class="cnv-name">Plastic</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/watches/fabric/">
+                                            <span class="cnv-name">Fabric</span>
+                                        </a>
+                                    </li>
+                                                                                                            </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/watches/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/casio-watches/"> Casio</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/24-01/"> 24:01</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/chronosport/"> Chronosport</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/timex/"> Timex</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/zoo-york/"> Zoo York</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/nixon/"> Nixon</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/watches/tokei/"> Tokei</a></li>
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/bags/" id="cat_2301" class="sel-cat-bags">
+                        <span class="nav-subTxt">BAGS</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/bags/bags-men/">
+                                            <span class="cnv-name">Bags</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/bags/wallets-small-accessories/">
+                                            <span class="cnv-name">Wallets</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/bags/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/zalora/">ZALORA</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/nike/">Nike</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/penshoppe/">Penshoppe</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/jansport/">Jansport</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/the-north-face/">The North Face</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/deuter/">Deuter</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/mick-marty/">Mick+Marty</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/collective-com/">Collective.com</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/mossimo/">Mossimo</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/bags/hawk/">Hawk</a></li>
+		
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/sports/" id="cat_139" class="sel-cat-sports">
+                        <span class="nav-subTxt">SPORTS</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                                <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/sports/mens-shoes/">
+                                            <span class="cnv-name">Shoes</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/sports/mens-clothing/">
+                                            <span class="cnv-name">Clothing</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/sports/backpack/">
+                                            <span class="cnv-name">Back packs</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                                                                                                                            <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/sports/mens-accessories/">
+                                            <span class="cnv-name">Accessories</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/sports/equipment/">
+                                            <span class="cnv-name">Equipment</span>
+                                        </a>
+                                    </li>
+                                                                                                            </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/sports/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">Top Brands</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/nike/">Nike</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/asics/">Asics</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/new-balance/">New Balance</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/puma/">PUMA</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/fila/">Fila</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/reebok/">Reebok</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/everlast/">Everlast</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/sports/spalding/">Spalding</a></li>
+                </ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                            <li class=" ">
+                                        <a href="/men/grooming/" id="cat_4358" class="sel-cat-grooming">
+                        <span class="nav-subTxt">GROOMING</span>
+                    </a>
+
+                                                                <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+    <span class="s-global iconSubArrow"></span>
+    <div class="navpal line">
+                                    <div class="box unit size1of2">
+                    <div class="prl">
+                        <h4 class="pbs">Shop by category</h4>
+                                                                    <div class="line mts">
+                        <ul class="cnv unit">
+                                                                                                                        <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/grooming/bath-body/">
+                                            <span class="cnv-name">Bath &amp; Body</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/grooming/skincare/">
+                                            <span class="cnv-name">Skincare</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/grooming/fragrances/">
+                                            <span class="cnv-name">Fragrances</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/grooming/hair-care/">
+                                            <span class="cnv-name">Hair Care</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                                    <li class="cnv-level-1 nav__subCatItem">
+                                        <a href="/men/grooming/tools-accessories/">
+                                            <span class="cnv-name">Tools &amp; Accessories</span>
+                                        </a>
+                                    </li>
+                                                                                                                                                                </ul>
+                        </div>
+                                                                    <div class="nav-sub-last-item">
+                            <a href="/men/grooming/">More</a>
+                        </div>
+                                            </div>
+                </div>
+                                            <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="pbs">TOP BRANDS</h4>
+        <div class="line mts">
+                <ul class="cnv unit">
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/gilette/"> Gilette</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/dove/"> Dove Men</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/pond-s-men/"> Pond's Men</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/belo/"> Belo Men</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/axe/"> Axe</a></li>
+		<li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/head-shoulders/"> Head and Shoulders</a></li>
+                <li class="cnv-level-1"><a href="http://www.zalora.com.ph/men/clear/"> Clear</a></li>
+		</ul>
+            </div>
+    </div>
+</div>        </div>
+</div>                                                            </li>
+                                                                                                                                                                                                                                                        <li class="">
+            <a class="sel-cat-brands" href="/men/brands">BRANDS</a>
+                                    <div class="nav-layer nav-layerSpec fsm box-bgcolor" style="width: 350px;">
+                <span class="s-global iconSubArrow"></span>
+                <div class="navpal line">
+                    <div class="box unit size1of2">
+    <div class="prl">
+        <h4 class="ui-borderBottom pbs">Featured Brands</h4>
+        <ul class="mts cnv">
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/mango-man/"> 
+MANGO Man</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/nike/"><span class="cnv-name cssicon"></span> 
+Nike</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/river-island/"><span class="cnv-name cssicon"></span> 
+River Island</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/rayban-philippines/"><span class="cnv-name cssicon"></span> 
+Ray-Ban</a></li>
+                        
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/penshoppe/"><span class="cnv-name cssicon"></span> 
+Penshoppe</a></li>
+
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/factorie/"><span class="cnv-name cssicon"></span> 
+Factorie</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/levis/"><span class="cnv-name cssicon"></span> 
+Levi's</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/casio-watches/"><span class="cnv-name cssicon"></span> 
+CASIO</a></li>
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/freego/"><span class="cnv-name cssicon"></span> 
+Freego</a></li> 
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/mint/"><span class="cnv-name cssicon"></span> 
+Mint</a></li> 
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/le-tigre/"><span class="cnv-name cssicon"></span> 
+Le Tigre</a></li>  
+
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/Sperry-Top-Sider /"><span class="cnv-name cssicon"></span> 
+Sperry Top Sider </a></li>
+                        
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/f-101/"><span class="cnv-name cssicon"></span> 
+F.101</a></li>
+                        
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/h2ocean/"><span class="cnv-name cssicon"></span> 
+H2Ocean</a></li>
+                        
+			 
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/American-Tourister"><span class="cnv-name cssicon"></span> 
+American Tourister </a></li>
+                       
+                        
+			 </ul>
+    </div>
+</div>
+<div class="box unit size1of2">
+    <div>
+        <h4 class="ui-borderBottom pbs">EXCLUSIVE BRANDS</h4>
+        <ul class="mts cnv">
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/zalora/"><span class="cnv-name cssicon"></span>ZALORA</a></li>
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/zalora-basics/"><span class="cnv-name cssicon"></span>ZALORA Basics</a></li>
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/mick-marty/"><span class="cnv-name cssicon"></span> Mick + Marty</a></li>
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/men/collective-com/"><span class="cnv-name cssicon"></span> Collective.Com</a></li>
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/kei-kori/"><span class="cnv-name cssicon"></span> Kei&amp;Kori</a></li>
+<li class="cnv-level-1 nav__subCatItem"><a href="http://www.zalora.com.ph/24-01/"><span class="cnv-name cssicon"></span> 24:01</a></li>
+ </ul>
+    </div>
+</div>                </div>
+            </div>
+                    </li>
+            <li class="last rfloat-imp"><a class="nav__item--red no-bg-image" href="/men/special-price/">SALE</a>
+    </li>
+    </ul>
+</div>                    </li><li class="">
+            [if lt IE 9]><span class="nav-subGradient"></span><![endif]
+                    </li>     </ul>            </div>
+        </div>
+            </div>
+</div>-->

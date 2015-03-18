@@ -2,7 +2,7 @@
 
 return [
     'modules' => [
-        'Site'
+        'BazaarSite'
     ],
     
     'module_listener_options' => [
