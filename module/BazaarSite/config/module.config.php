@@ -26,17 +26,7 @@ return [
             'template/partial/header'   => __DIR__ . '/../view/layout/partial/header.phtml',
             'template/partial/footer'   => __DIR__ . '/../view/layout/partial/footer.phtml',
             
-            // User/Merchant page layout
-            'regular/layout'           => __DIR__ . '/../view/layout/page/regular.phtml',
-            'paid/layout'           => __DIR__ . '/../view/layout/page/paid.phtml',
-            'page/layout'           => __DIR__ . '/../view/layout/page/premium.phtml',
-//            'template/footer'           => __DIR__ . '/../view/layout/partial/footer.phtml',
-//            'template/navigation/sidebar'           => __DIR__ . '/../view/layout/template/navigation/sidebar.phtml',
-//            'template/navigation/header'           => __DIR__ . '/../view/layout/template/navigation/header.phtml',
-//            'template/navigation/breadcrumbs'           => __DIR__ . '/../view/layout/template/navigation/breadcrumbs.phtml',
-//            'partial/navigation/header'           => __DIR__ . '/../view/layout/partial/navigation/header.phtml',
-//            'partial/navigation/sidebar'           => __DIR__ . '/../view/layout/partial/navigation/sidebar.phtml',
-//            'partial/navigation/breadcrumbs'           => __DIR__ . '/../view/layout/partial/navigation/breadcrumbs.phtml',
+            'template/navigation/sidebar'           => __DIR__ . '/../view/layout/template/navigation/sidebar.phtml',
         ],
         'template_path_stack'       => [
             'bazaar-site'   => __DIR__ . '/../view'

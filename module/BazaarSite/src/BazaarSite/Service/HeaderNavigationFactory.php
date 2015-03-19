@@ -24,23 +24,19 @@
  * THE SOFTWARE.
  */
 
-namespace BazaarSite\Controller;
+namespace BazaarSite\Service;
 
-use Zend\Mvc\Controller\AbstractActionController;
-use Zend\View\Model\ViewModel;
+use Zend\Navigation\Service\AbstractNavigationFactory;
 
 /**
- * BazaarSite\Controller\PageController
- *
- * @package BazaarSite\Controller
- * @author Gab Amba <gamba@gabbydgab.com>
+ * Mot\Service\HeaderNavigationFactory
+ * 
+ * @package Mot\Service
  */
-class PageController extends AbstractActionController
+class HeaderNavigationFactory extends AbstractNavigationFactory
 {
-    public function indexAction()
+    public function getName()
     {
-        
-        
-        return new ViewModel();
-    }    
+        return 'header';
+    }
 }

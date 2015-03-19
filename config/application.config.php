@@ -1,15 +1,30 @@
 <?php
 
+/**
+ * Modules that are used within the application.
+ * 
+ * IMPORTANT: Be Careful in changing the sequence - it may affect the result
+ */
+$modules = [
+    'EdpModuleLayouts',
+    'BazaarSite',
+    'BazaarCatalog',
+    'BazaarMembership',
+//    'BazaarMarket',
+];
+
+/**
+ * Append modules that are used ONLY during development/testing
+ */
+$env = strtolower(getenv('APPLICATION_ENV')); //manually assigned within VHOST
+
+if ($env === 'development' || $env === 'testing') {
+    $modules[] = 'ZendDeveloperTools';
+}
+
 return [
     // This should be an array of module namespaces used in the application.
-    'modules' => [
-        'EdpModuleLayouts',
-        'BazaarSite',
-        'BazaarMembership',
-//        'BazaarCatalog',
-        'BazaarMarket',
-        
-    ],
+    'modules' => $modules,
 
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => [

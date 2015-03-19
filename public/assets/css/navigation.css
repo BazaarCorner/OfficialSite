@@ -1,0 +1,131 @@
+.leftpanel .nav {
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    border-right: 1px solid #e7e7e7;
+    font-size: 15px;
+}
+
+.leftpanel .nav > li {
+    /*margin: 0 1px 0 0;*/
+    border-top: 1px solid #e7e7e7;
+    position: relative;
+}
+
+.leftpanel .nav > li.active {
+    border-top: 0;
+    margin-right: 0;
+}
+
+.leftpanel .nav > li.active + li {
+    border-top: 0;
+}
+
+.leftpanel .nav > li > a {
+    color: #555;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -moz-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+    padding: 10px 15px;
+}
+
+.leftpanel .nav > li > a:hover,
+.leftpanel .nav > li > a:focus,
+.leftpanel .nav > li > a:active {
+    background-color: #f2dede;
+}
+
+.leftpanel .nav > li.active > a,
+.leftpanel .nav > li.active > a:hover {
+    color: #fff;
+    background-color: #f2dede;
+}
+
+.leftpanel .nav > li > a i {
+    width: 16px;
+    margin-right: 5px;
+    color: orangered;
+    font-size: 15px;
+    top: 1px;
+    position: relative;
+    text-align: center;
+}
+
+.leftpanel .nav > li.active > a i {
+    color: #fff;
+}
+
+.leftpanel .nav > li.parent:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    color: #ccc;
+}
+
+.leftpanel .nav > li.parent-focus > a {
+    background-color: #f7f7f7;
+}
+
+.leftpanel .nav .badge {
+    font-weight: normal;
+    line-height: normal;
+    font-size: 11px;
+    background-color: #2f363d;
+}
+
+.leftpanel .nav .children {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.leftpanel .nav .active .children,
+.leftpanel .nav .parent-focus .children {
+    display: block;
+}
+
+.leftpanel .nav > li.active:after {
+    color: #fff;
+}
+
+.leftpanel .nav .children li:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+.leftpanel .nav .children li.active:first-child {
+    border-top: 0;
+}
+
+.leftpanel .nav .children li a {
+    font-weight: normal;
+    font-size: 13px;
+    display: block;
+    color: #444;
+    padding: 6px 10px 6px 40px;
+    -moz-transition: all 0.2s ease-out 0s;
+    -webkit-transition: all 0.2s ease-out 0s;
+    transition: all 0.2s ease-out 0s;
+}
+
+.leftpanel .nav .children li a:hover {
+    text-decoration: none;
+    background-color: #f2dede;
+}
+
+.leftpanel .nav .children li.active a {
+    background-color: #f2dede;
+}
+
+.leftpanel .nav .active .children {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.leftpanel .nav .active .children {
+    margin-right: 1px;
+}
