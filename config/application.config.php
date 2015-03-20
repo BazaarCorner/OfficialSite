@@ -8,7 +8,7 @@
 $modules = [
     'EdpModuleLayouts',
     'BazaarSite',
-    'BazaarCatalog',
+//    'BazaarCatalog',
     'BazaarMembership',
 //    'BazaarMarket',
 ];

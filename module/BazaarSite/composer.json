@@ -1,35 +1,32 @@
 {
-    "name": "bazaarcorner/bazaar-site",
-    "description": "website module",
-    "license": "MIT",
-    "type": "website",    
-    "authors": [
+    "name"          : "bazaarcorner/bazaar-site",
+    "description"   : "website module",
+    "license"       : "MIT",
+    "type"          : "website",    
+    "authors"       : [
         {
-            "name": "Gab Amba",
-            "email": "gamba@gabbydgab.com",
-            "homepage": "http://www.gabbydgab.com/"
+            "name"      : "Gab Amba",
+            "email"     : "gamba@gabbydgab.com",
+            "homepage"  : "http://www.gabbydgab.com/"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "Site\\": "src/Site/"
-        },
-        "classmap": [
-        "./Module.php"
-        ]
+    "autoload"      : {
+        "psr-4"     : {"BazaarSite\\": "src/BazaarSite/"},
+        "classmap"  : ["./Module.php"]
     },
-    "autoload-dev": {
+    "autoload-dev"  : {
         "psr-4": {
-            "SiteTest\\": "tests/SiteTest/"
+            "BazaarSiteUnitTest\\"          : "tests/unit/",
+            "BazaarSiteIntegrationTest\\"   : "tests/integration/"
         }
     },
-    "require": {
+    "require"       : {
         "php": ">=5.4"
     },
-    "require-dev": {
-        "phpunit/phpunit": "~4.5",
-        "phpunit/php-invoker": "~1.1",
-        "zendframework/zendframework": "~2.3",
-        "evandotpro/edp-module-layouts": "dev-master"
+    "require-dev"   : {
+        "phpunit/phpunit"               : "~4.5",
+        "phpunit/php-invoker"           : "~1.1",
+        "zendframework/zendframework"   : "~2.3",
+        "evandotpro/edp-module-layouts" : "dev-master"
     }
 }

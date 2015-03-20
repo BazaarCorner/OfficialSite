@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<phpunit bootstrap="Bootstrap.php">
+<phpunit bootstrap="Bootstrap.php" color="true">
     <logging>
-        <log type="coverage-html"  target="build/coverage" title="Site"
+        <log type="coverage-html"  target="build/coverage" title="BazaarSite"
         charset="UTF-8" yui="true" highlight="true"
         lowUpperBound="35" highLowerBound="true" />
         <log type="coverage-clover" target="build/logs/clover.xml" />
@@ -13,7 +13,10 @@
 
     <testsuites>
         <testsuite name="unit">
-            <directory>./tests/</directory>
+            <directory>./tests/unit/</directory>
+        </testsuite>
+        <testsuite name="integration">
+            <directory>./tests/integration/</directory>
         </testsuite>
     </testsuites>
     

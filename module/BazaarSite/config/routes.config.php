@@ -73,7 +73,7 @@ return [
             'terms' => [
                 'type'  => "Literal",
                 'options' => [
-                    'route' => '/terms_-and-_condition',
+                    'route' => '/terms',
                     'defaults' => [
                         'controller'    => 'BazaarSite\Controller\Index',
                         'action'  => 'terms-and-condition',
@@ -83,20 +83,10 @@ return [
             'policy' => [
                 'type'  => "Literal",
                 'options' => [
-                    'route' => '/privacy_policy',
+                    'route' => '/policy',
                     'defaults' => [
                         'controller'    => 'BazaarSite\Controller\Index',
-                        'action'  => 'privacy-policy',
-                    ]
-                ]
-            ],
-            'shipping' => [
-                'type'  => "Literal",
-                'options' => [
-                    'route' => '/shipping_-and-_returns',
-                    'defaults' => [
-                        'controller'    => 'BazaarSite\Controller\Index',
-                        'action'  => 'shipping-and-return',
+                        'action'  => 'policy',
                     ]
                 ]
             ]

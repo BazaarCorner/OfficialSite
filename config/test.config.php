@@ -2,7 +2,15 @@
 
 return [
     'modules' => [
-        'BazaarSite'
+        'BazaarSite',
+        'BazaarMembership',
+        'BazaarSubscription',
+        'BazaarSocials',
+        'BazaarCatalog',
+        'BazaarOrders',
+        'BazaarPayments',
+        'BazaarShopping',
+        'BazaarMarket'
     ],
     
     'module_listener_options' => [
